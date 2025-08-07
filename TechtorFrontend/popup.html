@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Privacy Policy Helper</title>
+    <style>
+        body {
+            width: 280px;
+            padding: 16px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #4a90e2;
+            font-size: 18px;
+            margin: 0 0 12px 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .description {
+            color: #2c3e50;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .status {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .status-text {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .status.active .status-indicator {
+            background: #4CAF50;
+        }
+        
+        .status.inactive .status-indicator {
+            background: #f44336;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        button.enable {
+            background: #4a90e2;
+            color: white;
+        }
+        
+        button.enable:hover {
+            background: #357abd;
+        }
+        
+        button.disable {
+            background: #f44336;
+            color: white;
+        }
+        
+        button.disable:hover {
+            background: #d32f2f;
+        }
+        
+        .footer {
+            margin-top: 12px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Techtor</h1>
+        <div class="description">
+            Select any term in the privacy policy to see its explanation.
+        </div>
+        <div class="status" id="statusContainer">
+            <div class="status-indicator"></div>
+            <div class="status-text">Extension is enabled</div>
+        </div>
+        <button id="toggleButton" class="enable">Disable Extension</button>
+        <div class="footer">
+            Click the button to toggle the extension
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
